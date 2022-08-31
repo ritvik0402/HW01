@@ -1,0 +1,104 @@
+"""
+Georgia Institute of Technology - CS1301
+HW01 - Functions & Expressions
+"""
+#########################################
+"""
+Function Name: tasteOfTech()
+Parameters: N/A
+Returns: None
+"""
+def tasteOfTech():
+        name = input("What is your name? ")
+	n = str(name)
+	tin = input("How much did you spend at Tin Drum? ")
+	t = float(tin)
+	rounded_tin = round(t, 2)
+	waffle = input("How much did you spend at Waffle House? ")
+	w = float(waffle)
+	rounded_waffle = round(w, 2)
+	buffalo = input("How much did you spend at Buffalo Wild Wings? ")
+	b = float(buffalo)
+	rounded_buffalo = round(b, 2)
+	total = rounded_tin + rounded_waffle + rounded_buffalo
+	doge = total * 14.57
+	d = float(doge)
+	rounded_doge = round(d, 2)
+	print("Congratulations {}! You spent ${} in total and earned {} DOGE.".format(n, total, rounded_doge))  
+    
+#########################################
+"""
+Function Name: shoppingMoney()
+Parameters: N/A
+Returns: None
+"""
+def shoppingMoney():
+        income = input("How much is your monthly income? ")
+        i = float(income)
+        h_f = i - 1020
+        savings = h_f * 0.6
+        rounded_savings = round(savings, 2)
+        spending = h_f - savings
+        rounded_spending = round(spending, 2)
+        print("You can save ${} and spend the remaining ${} on anything this month.".format(rounded_savings, rounded_spending))
+  
+#########################################
+"""
+Function Name: houseParty()
+Parameters: N/A
+Returns: None
+"""
+def houseParty():
+        chicken_nuggets = input("How many chicken nuggets will each guest eat? ")
+        c_n = int(chicken_nuggets)
+        onion_rings = input("How many onion rings will each guest eat? ")
+        onion = int(onion_rings)
+        donuts = input("How many donuts will each guest eat? ")
+        d = int(donuts)
+        cookies = input("How many cookies will each guest eat? ")
+        c = int(cookies)
+        guests = input("How many guests are you expecting at the party? ")
+        g = int(guests)
+        total_cn = c_n * g
+        total_onion = onion * g
+        total_donuts = d * g
+        total_cookies = c * g
+        print("You need to buy {} chicken nuggets, {} onion rings, {} donuts and {} cookies for {} guests.".format(total_cn, total_onion, total_donuts, total_cookies, g))
+    
+#########################################
+"""
+Function Name: spareTime()
+Parameters: N/A
+Returns: None
+"""
+def spareTime():
+        credit = input("How many credits are you taking this semester? ")
+        c = int(credit)
+        hoursSpentPerWeek = c * 4
+        freeTimePerWeek = 112 - hoursSpentPerWeek
+        freeTimePerDay = freeTimePerWeek / 7
+        hours = int(freeTimePerDay // 1)
+        minutes = (freeTimePerDay - hours) * 60
+        minutesRounded = round(minutes, 1)
+        print("You have {} hours and {} minutes per day to spare for other activities.".format(hours, minutesRounded))
+    
+#########################################
+"""
+Function Name: ratsNight()
+Parameters: N/A
+Returns: None
+"""
+def ratsNight():
+        videoGame_timeSlot = 30
+        trivia_timeSlot = 10
+        artsCrafts_timeSlot = 45
+        videoGames = int(input("How many slots would you like to book for video games? "))
+        trivia = int(input("How many slots would you like to book for trivia? "))
+        artsCrafts = int(input("How many slots would you like to book for arts and crafts? "))
+        total_minutes = (videoGames * videoGame_timeSlot) + (trivia * trivia_timeSlot) + (artsCrafts * artsCrafts_timeSlot)
+        hours = int(total_minutes // 60)
+        minutes = ((total_minutes / 60) - hours) * 60
+        rounded_minutes = round(minutes, 2)
+        m = int(rounded_minutes)
+        print("You will spend {} hours and {} minutes at Rats Night.".format(hours, m))
+    
